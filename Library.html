@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranganathan Library</title>
+
+
+    <link href="image slider.css" type="text/css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background-color: rgb(rgb(255, 255, 255), rgb(102, 102, 102), rgb(85, 85, 107));
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+
+        }
+
+        header {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            display: block;
+            border: cornflowerblue;
+            border-radius: 10px;
+
+
+        }
+
+        .toplinks {
+            background-color: white;
+            display: inline-flex;
+            float: right;
+
+
+
+        }
+
+        .toplinks a {
+            text-decoration: none;
+            padding: 3px;
+
+
+        }
+
+        .social-logo {}
+
+        .social-logo img {
+
+            padding-top: 3px;
+            height: 12px;
+            width: 15px;
+
+        }
+
+
+
+
+        .right-header {
+
+            margin-left: 75%;
+            padding-bottom: 7px;
+
+
+
+
+        }
+
+        .left-header {
+            background-color: rgb(red, rgb(29, 32, 29), blue);
+            font-size: 28px;
+            font-weight: bold;
+            color: black;
+            display: inline-block;
+
+
+        }
+
+        .header-main {
+            text-shadow: 3px 5px 4px red;
+        }
+
+
+
+        .btn-search {
+            background-color: rgb(152, 255, 152);
+            border: 1px solid black;
+            width: 60px;
+            border-radius: 3px;
+        }
+
+        .btn-search:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        /*navigation start here*/
+        .navbar {
+            background-color: coral;
+            position: static;
+            max-height: 250px;
+
+
+        }
+
+
+        .navigation {
+            display: flex;
+            border: 3px solid red;
+            box-shadow: 2px 3px 4px rgb(64, 73, 64);
+
+        }
+
+        .navbar li {
+            padding: 3px;
+            margin: 2px;
+            list-style: none;
+            display: block;
+            color: white;
+
+        }
+
+        .navbar li a {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-size-adjust: 12px;
+            margin: 10px;
+            padding: 1px;
+            text-decoration: none;
+            transition: all;
+            transition-duration: 0.1s;
+            transition-timing-function: ease-out;
+        }
+
+        .navbar li a:hover {
+            background-color: black;
+            font-size: 17px;
+
+        }
+
+         .navbar ul li ul {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 1.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+
+        }
+
+        .navbar ul li:hover>ul,
+        ul li ul:hover {
+            visibility: visible;
+
+            opacity: 1;
+            display: block;
+            box-sizing: content-box;
+            max-width: 250px;
+
+
+
+            background-color: brown;
+            z-index: 1;
+        }
+
+        ul li ul li {
+            clear: both;
+            width: 100%;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px black;
+
+
+        } 
+
+        /* ul li ul li a {
+            border: 1px 4px solid red;
+            border-radius: 4px;
+
+        } */
+       /* #sub-menu3 ul,
+       #sub-menu4 ul,
+       #sub-menu5 ul  {
+        visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 1.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+       }
+
+
+
+
+
+        #sub-menu3 ul :hover,
+        #sub-menu4 ul :hover,
+        #sub-menu5 ul :hover {
+            visibility: visible;
+
+            opacity: 1;
+            display: block;
+            box-sizing: content-box;
+            max-width: 250px;
+
+
+
+            background-color: brown;
+            z-index: 1;
+
+        } */
+
+        /*Text box start here*/
+        .ct {
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .textbox {
+            border: 1px solid black;
+            background-color: white;
+            width: 300px;
+            height: 400px;
+        }
+
+        #box1 {
+            background-color: white;
+            width: 200px;
+            height: 350px;
+        }
+
+        #box1 li {
+            background-color: rgb(80, 82, 82);
+            padding: 5px 5px;
+            border: 1px solid red;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        #box1 li:hover {
+            background-color: black;
+            transform: skew(-8deg) scale(1.09);
+
+
+        }
+
+
+        #box1 li a {
+            color: white;
+            padding: 5px 14px;
+
+            border: 1px solid red;
+            border-radius: 5px;
+            text-align: justify;
+            font-size: 18px;
+            font-weight: bolder;
+            text-shadow: 2px 3px 2px black;
+            text-decoration: none;
+        }
+
+
+        #box2 {
+            width: 1380px;
+            height: 350px;
+        }
+
+        #box2 .text-justify {
+            color: rgb(56, 55, 53);
+            padding: 10px;
+            text-align: justify;
+            font-size: 20px;
+            font-weight: lighter;
+        }
+
+
+        /*Text box end  here*/
+
+
+        div .container {
+            background-color: white;
+            padding-left: 1px;
+        }
+
+        #lib-time {
+            padding-left: 4px;
+            color: cadetblue;
+
+        }
+
+        table h2 {
+            padding-left: 5px;
+        }
+
+        table {
+            background-color: rgb(153, 153, 152);
+            width: 800px;
+            height: 50px;
+            text-align: center;
+            position: relative;
+            margin-left: 180px;
+            border: 1px solid rgb(64, 73, 64);
+
+        }
+
+        .thead {
+            background-color: crimson;
+        }
+
+        .container-time {
+
+            text-align: right;
+        }
+
+        #time {
+            font-weight: bold;
+        }
+
+        /*resouces grid start here*/
+        .rsrc-heading {
+            padding-top: 18px;
+            text-align: center;
+
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            align-items: center;
+            padding: 1px 1px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 4px;
+            align-items: center;
+            border: 1px solid red;
+
+        }
+
+        .container .card {
+            width: 150px;
+            height: 150px;
+            background-color: rgb(65, 223, 157);
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+
+            box-shadow: 8px 20px 25px 4px rgba(87, 86, 86, 0.329);
+            transition: all 0.5s ease-out;
+
+        }
+
+        .container .card:hover {
+            width: 180px;
+            height: 180px;
+            font: 1.2em sans-serif;
+            font-weight: bolder;
+            background-color: black;
+            color: rgb(255, 247, 247);
+            border-radius: 20px;
+            text-align: center;
+
+            box-shadow: -128px -200px -250px -40px rgba(233, 250, 79, 0.719);
+
+        }
+
+        .container .card .imgx {
+            width: fit-content;
+
+
+        }
+
+        .container .card .imgx img {
+            width: 80px;
+            height: 60px;
+        }
+
+        .container .card .content {
+            font-weight: bolder;
+            justify-content: center;
+            padding: 10px 35px;
+            height: 80px;
+            width: fit-content;
+            cursor: pointer;
+        }
+
+        .container .card .content a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+
+        }
+
+        .container .card .content a:hover {
+            color: rgb(245, 240, 240);
+        }
+
+        /*footer sart here*/
+        .footer-container {
+            background-color: ;
+            height: 200px;
+            width: 100%;
+            display: flex;
+            position: static;
+            flex-direction: row;
+            justify-content: flex-start;
+            justify-items: center;
+            margin-top: 200px;
+
+        }
+
+        .footerbox {
+            height: 100px;
+            width: 1100px;
+            background-color: rgb(200, 100, 150);
+            padding: 12px 3px;
+            margin: 4px 5px;
+
+        }
+
+
+        #footer-li {
+            width: 500px;
+        }
+
+        #footer-li li {
+            float: left;
+            list-style: none;
+        }
+
+        #footer-li li a {
+            height: 5px;
+            width: 10px;
+            padding: 2px 7px;
+            text-decoration: none;
+            color: white;
+
+        }
+
+        #footer-right {
+            color: white;
+            width: 800px;
+
+        }
+
+        #copyright {
+            font-size: 12px;
+
+            height: 10px;
+            color: white;
+            text-align: center;
+            align-self: flex-end;
+        }
+
+        #footer-right {
+            padding-left: 1px;
+        }
+
+        .bottom-footer {
+            background-color: rgb(44, 49, 44);
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .bottom-footer a {
+            text-decoration: none;
+            color: rgb(184, 160, 160);
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <header>
+        <div class="left-header">
+
+            <h1 class="header-main">Ranganathan Library</h1>
+        </div>
+        <div class="toplinks">
+            <P> <a href="#">Alumini</a>
+                |
+                <a href="#">sitemap</a>
+                |
+                <a href="#">Calender</a>
+                |
+                <a href="#">Log in</a>
+                <span></span>
+                </br>
+
+                <span style="font-size: 14px;color:blueviolet;padding-left:60px;">Our social handles:</span>
+                <span style="padding-left:0px;"></span>
+                <a href="https://www.facebook.com/ajit.kainchi/" target="_blank" class="social-logo"><img
+                        src="image/facebook-logo.png" alt="fb" id="fb-logo"></a>
+                <a href="" class="social-logo"> <img src="image/IG-logo.jpg" alt="" id="ig-logo"></a>
+                <a href="" class="social-logo"> <img src="image/twitter-logo.png" alt="" id="twitter-logo"></a>
+
+
+            </P>
+
+
+        </div>
+        <div class="right-header">
+            <div class="search">
+                <input type="text" placeholder="search here" name="search">
+                <label for="collection"></label>
+                <select name="collection" id="dropdown-search">
+                    <option value="bk">Books</option>
+                    <option value="jrnl" selected>Journal</option>
+                    <option value="Ths" selected>Thesis</option>
+                    <option value="Ref" selected>Reference Material</option>
+                </select>
+                <button class="btn-search">search</button>
+            </div>
+        </div>
+    </header>
+    <!--navigation bar start here-->
+    <nav class="navbar">
+        <ul class="navigation">
+            <li><a href="http//www.google.com">Home</a></li>
+            <li><a href="http//www.google.com>">Cataloguing</a></li>
+            <li><a href="http//www.google.com>" id="sub-menu3">Collection</a>
+                <ul class="dropdown">
+                    <li><a href="#">Ranganathan collection</a></li>
+                    <li><a href="#">Asiatic collection</a></li>
+                    <li><a href="#">Hindu collection</a></li>
+                </ul>
+            </li>
+            <li>E-Resources
+                <ul class="dropdown" id="sub-menu4">
+                    <li><a href="#">E-Books</a></li>
+                    <li><a href="#">E-Journals</a></li>
+                    <li><a href="#">E-Database</a></li>
+                    <li><a href="#">E-patent</a></li>
+                    <li><a href="#">E-Newspapers</a></li>
+                    <li><a href="#">E-References</a></li>
+                    <li><a href="#">E-Thesis&Dissertation</a></li>
+                    <li><a href="#">E-Magazines</a></li>
+                </ul>
+            </li>
+            <li><a href="http//www.google.com>" id="sub-menu5">Services</a>
+
+                <ul class="dropdown">
+                    <li>Reference Service</li>
+                    <li>Refferal Service</li>
+                    <li>Document Delivery</li>
+                    <li>Photocopying</li>
+                    <li>As a Librarian</li>
+
+                </ul>
+            </li>
+            <li><a href="http//www.google.com>">Sections</a></li>
+            <li><a href="http//www.google.com>">OPAC</a></li>
+            <li><a href="#">Library Team</a></li>
+            <li><a href="http//www.google.com>">Contact us</a></li>
+
+        </ul>
+
+    </nav>
+    <!--navigation bar end here-->
+    <div class="slider">
+        <span id="slider-image-1"></span>
+        <span id="slider-image-2"></span>
+        <span id="slider-image-3"></span>
+        <div class="image-holder">
+            <img src="image/image 1.jpg" alt="" class="slider-image">
+            <img src="image/image 2.jpg" alt="" class="slider-image">
+            <img src="image/image 3.jpg" alt="" class="slider-image">
+        </div>
+        <div class="button-holder">
+            <a href="#slider-image-1" class="slider-change">Next</a>
+            <a href="#slider-image-2" class="slider-change"></a>
+            <a href="#slider-image-3" class="slider-change"></a>
+        </div>
+
+
+    </div>
+
+
+    <!--Library timing table--->
+
+    <table class="librarytime">
+        <h2 class="librarytime" id="lib-time">Library timing
+            <button>
+                &gt;
+            </button>
+        </h2>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday to Saturday</td>
+                <td>10AM to 5 PM</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="container-time">
+        Current time is <span id="time"></span>
+    </div>
+    <!--Text box start here-->
+    <div class="ct">
+        <div class="textbox" id="box1">
+            <h3>Other Links</h3>
+            <ul>
+                <li><a href="#" class="sidemenu">Database</a></li>
+                <li><a href="#" class="sidemenu">Catalog</a></li>
+                <li><a href="#" class="sidemenu">Publication</a></li>
+                <li><a href="#" class="sidemenu"> Open Access</a></li>
+                <li><a href="#" class="sidemenu">Student Corner</a></li>
+                <li><a href="#" class="sidemenu">Research</a></li>
+            </ul>
+        </div>
+        <div class="textbox" id="box2">
+            <h3>Welcome to Ranganthan Library</h3>
+            <div class="text">
+                <p class="text-justify">
+                    The Ranganathan Library was established in 1948 by Dr.S.R Ranganthan.We have a best collection of
+                    books,journals,thesis,dissertation,
+                    and other library materials.Our collection have a 80000 Books,20000 Journal articles,3000
+                    Thesis,5000 Dissertation and many more.
+
+                </p>
+
+                <p class="text-justify">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, sint voluptatibus. Quae aperiam
+                    velit porro deserunt voluptatum omnis magni? Numquam!
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim rem minus repudiandae fugit. Quasi
+                    excepturi iure maxime, saepe voluptas beatae. Odio quae maxime,
+                    iure possimus incidunt nostrum iste ullam eos dolor nobis nemo rerum maiores iusto mollitia libero
+                    est itaque exercitationem recusandae adipisci tenetur magni!
+                    Beatae expedita sequi temporibus ad fuga, labore similique facilis iure. Esse delectus saepe eaque?
+                    Illum provident temporibus, minima recusandae praesentium doloremque
+                    nostrum libero dolore quis animi quos deserunt distinctio ea cupiditate vero odit fugit sed corrupti
+                    repellat reiciendis, velit magni impedit. Eveniet corrupti repudiandae
+                    quo fugit doloremque unde, commodi iste eligendi sed, error quaerat non corporis similique
+                    repellendus ipsa iure nemo ab beatae in saepe. Deserunt totam repudiandae voluptas,
+                    sapiente est officia ullam itaque aut esse ipsa sed asperiores animi quis excepturi. Ut similique
+                    dolore perferendis nihil est fuga explicabo at consectetur dicta cumque pariatur officiis ea,
+                    voluptas cum atque consequuntur itaque ratione expedita fugit.
+                </p>
+
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <!--Resources grid start here-->
+    <div class="rsrc-heading">
+        <h2>Our Resources</h2>
+    </div>
+    <div class="container">
+
+        <div class="card " id="card2">
+            <div class="imgx"> <img src="image/book-png.png" alt="cardlogo" class="card-logo"></div>
+            <div class="content">
+                <h3><a href="#">33000</br>books</a> </h3>
+
+            </div>
+
+        </div>
+        <div class="card " id="card2">
+            <div class="imgx"> <img src="image/book-png.png" alt="cardlogo" class="card-logo"></div>
+            <div class="content">
+                <h3>12000 </br>Journals</h3>
+
+            </div>
+        </div>
+
+
+        <div class="card " id="card2">
+            <div class="imgx"> <img src="image/book-png.png" alt="cardlogo" class="card-logo"></div>
+            <div class="content">
+                <h3>7500 </br>Magazines</h3>
+
+            </div>
+        </div>
+
+        <div class="card " id="card2">
+            <div class="imgx"> <img src="image/book-png.png" alt="cardlogo" class="card-logo"></div>
+            <div class="content">
+                <h3>4000 </br>Patents</h3>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="card " id="card2">
+            <div class="imgx"> <img src="image/book-png.png" alt="cardlogo" class="card-logo"></div>
+            <div class="content">
+                <h3>20000 </br>Thesis</h3>
+
+            </div>
+
+        </div>
+        <div class="card " id="card2">
+            <div class="imgx"> <img src="image/book-png.png" alt="cardlogo" class="card-logo"></div>
+            <div class="content">
+                <h3>18000 </br>Ausio & Video</h3>
+
+            </div>
+        </div>
+
+
+        <div class="card " id="card2">
+            <div class="imgx"> <img src="image/book-png.png" alt="cardlogo" class="card-logo"></div>
+            <div class="content">
+                <h3>8000 </br>Reference Materials</h3>
+
+            </div>
+        </div>
+
+        <div class="card " id="card2">
+            <div class="imgx"> <img src="image/book-png.png" alt="cardlogo" class="card-logo"></div>
+            <div class="content">
+                <h3>16000 </br>Dissertation</h3>
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+    </div>
+
+
+
+    <!--Resources grid end here-->
+
+    <!--Footer start here-->
+    <footer class="footer-container">
+
+        <div class="footerbox" id="li-menu">
+            <ul id="footer-li">
+                <li><a>Library</a> </li>
+                <li><a href="#contact us">Contact us</a></li>
+                <li><a href="">Privacy policy</a></li>
+                <li><a href="">Rule and Regulation</a></li>
+                <li><a href="">History</a></li>
+
+            </ul>
+        </div>
+
+        <div class="footerbox" id="copyright">
+            <p class="text-center">copyright &COPY;Ranganathan Library </p>
+        </div>
+        <div class="footerbox"></div>
+        <div class="footerbox" id=footer-right>
+            <h4>Address</h4>
+            <p>Salt lack city,New Town<span>,Bhubaneswar,Odisha</br>Pin-751002 </span> </br>
+                <span class="email"> &#9993:ajit3131kumar@gmail.com</span> </br>
+                <span> &#9743;:8457948233 </span>
+            </p>
+
+        </div>
+    </footer>
+    <footer class="bottom-footer">
+        <p> &copy;2020-21 RanganathanLibrary.com </p>
+
+        <p>
+            <a href="#" class="">Back to Top</a>
+            |
+            <a href="#" class="">Privacy</a>
+            |
+            <a href="#" class="">Terms</a>
+        </p>
+    </footer>
+    <script>
+        setInterval(updateTime, 1000);
+
+        function updateTime() {
+            time.innerHTML = new Date();
+        }
+    </script>
+
+
+</body>
+
+
+
+</html>
