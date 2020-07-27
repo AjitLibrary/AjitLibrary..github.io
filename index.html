@@ -7,7 +7,7 @@
     <title>Ranganathan Library</title>
 
 
-   
+    <link href="image slider.css" type="text/css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
@@ -224,7 +224,7 @@
 
         /* slider start here */
         .slider {
-           
+           background-color: wh;
             display: flex;
             width: 80%;
             padding: 10px 0px;
@@ -236,12 +236,12 @@
         .slider1-image,
             {
             height: 297px;
-           widows: 50%;
+           width: 50%;
         }
 
         .slider2-image {
             height: 300px;
-            widows: 50%;
+            width: 50%;
         }
          .slider1-image img{
             height: 300px;
@@ -269,7 +269,7 @@
 
         #box1 {
             background-color: white;
-            width: 200px;
+            width:20%;
             height: 350px;
         }
 
@@ -304,8 +304,11 @@
 
 
         #box2 {
-            width: 1380px;
+            width:80%;
             height: 350px;
+            position:relative;
+            display: block;
+            overflow-y:scroll;
         }
 
         #box2 .text-justify {
@@ -320,11 +323,7 @@
         /*Text box end  here*/
 
 
-        div .container {
-            background-color: white;
-            padding-left: 1px;
-        }
-
+       
         #lib-time {
             padding-left: 4px;
             color: cadetblue;
@@ -337,7 +336,7 @@
 
         table {
             background-color: rgb(153, 153, 152);
-            width: 800px;
+            width:60%;
             height: 50px;
             text-align: center;
             position: relative;
@@ -365,7 +364,13 @@
             text-align: center;
 
         }
-
+ /* div .container {
+            background-color: white;
+            padding-left: 1px;
+            display: block;
+            width: 80%;
+            margin: auto;
+        } */
         .container {
             position: relative;
             width: 100%;
@@ -459,7 +464,9 @@
             margin: 4px 5px;
 
         }
-
+#footer-li-menu{
+    width: 70%;
+}
 
         #footer-li {
             width: 500px;
@@ -481,23 +488,11 @@
 
         #footer-right {
             color: white;
-            width: 800px;
-
-        }
-
-        #copyright {
-            font-size: 12px;
-
-            height: 10px;
-            color: white;
-            text-align: center;
-            align-self: flex-end;
-        }
-
-        #footer-right {
+            width: 30%;
             padding-left: 1px;
         }
 
+        
         .bottom-footer {
             background-color: rgb(44, 49, 44);
             height: 50px;
@@ -643,7 +638,7 @@
 
     <!--Library timing table--->
 
-    <table class="librarytime">
+    <table id="librarytime">
         <h2 class="librarytime" id="lib-time">Library timing
             <button>
                 &gt;
@@ -819,7 +814,7 @@
     <!--Footer start here-->
     <footer class="footer-container">
 
-        <div class="footerbox" id="li-menu">
+        <div class="footerbox" id="footer-li-menu">
             <ul id="footer-li">
                 <li><a>Library</a> </li>
                 <li><a href="#contact us">Contact us</a></li>
@@ -830,15 +825,13 @@
             </ul>
         </div>
 
-        <div class="footerbox" id="copyright">
-            <p class="text-center">copyright &COPY;Ranganathan Library </p>
-        </div>
-        <div class="footerbox"></div>
+       
+       
         <div class="footerbox" id=footer-right>
             <h4>Address</h4>
             <p>Salt lack city,New Town<span>,Bhubaneswar,Odisha</br>Pin-751002 </span> </br>
-                <span class="email"> &#9993:ajit31kumar@gmail.com</span> </br>
-                <span> &#9743;:8576948233 </span>
+                <span class="email"> &#9993:ajit3131kumar@gmail.com</span> </br>
+                <span> &#9743;:8476948233 </span>
             </p>
 
         </div>
